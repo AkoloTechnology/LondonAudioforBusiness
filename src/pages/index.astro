@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LoremIpsum from '../components/loremipsum.astro';
+---
+
+<Layout>
+        <div class="hero">
+            
+        </div>
+        <div class="container">
+            <LoremIpsum count="20" />
+        </div>
+</Layout>
+<style>
+    .hero {
+        height: 70dvh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("hero.jpg");
+    }
+</style>
