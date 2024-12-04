@@ -1,0 +1,94 @@
+---
+import LoremIpsum from '../components/loremipsum.astro';
+---
+<footer>
+    <div class="linebreak"></div>
+    <div class="container">
+        <div class="footersections">
+            <div class="links">
+                <div class="title">Links</div>
+                <a href="./index.html">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./industries.html">Industries</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contact.html">Contact Us</a>
+            </div>
+            <div class="follow">
+                <div class="title">Follow Us</div>
+                <div class="socialmedia">
+                    <a href="/">Instagram</a>
+                    <a href="/">Facebook</a>
+                </div>
+            </div>
+            <div class="subscribe">
+                <div class="title">Subscribe</div>
+                <form action="/">
+                    <label for="email">Sign up if you would like to receive our newsletter</label>
+                    <input class="input" type="text" name="email" value="Your email address">
+                    <input class="submit" type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="contact">
+                <div class="title">Contact Us</div>
+                <p>1491 Fanshawe Park Rd. West</br>London, Ontario N6H5L3 Canada</p>
+                <a href="tel:(519)673-1780">(519) 673-1780</a>
+                <a href="mailto:audioinfo@londonaudio.com">audioinfo@londonaudio.com</a>
+            </div>
+        </div>
+    </div>    
+    <div class="copyright linebreak">Copyright 2024 - London Audio</div>
+</footer>
+
+<style>
+    .linebreak {
+        border-top: 1px solid rgb(47, 47, 47);
+    }
+    .footersections {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .footersections > div {
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links > a {
+        font-size: 16px;
+        padding: 2px;
+        color: #8f8f8f;
+    }
+    .socialmedia {
+        display: flex;
+        flex-direction: column;
+    }
+    .socialmedia > a {
+        font-size: 16px;
+        padding: 2px;
+        color: #8f8f8f;
+    }
+    .subscribe > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    .subscribe > form > * {
+        font-size: 14px;
+        color: #8f8f8f;
+    }
+    .input {
+        text-align: center;
+    }
+    .submit {
+        color: #000000;
+    }
+    .contact > p, .contact > a {
+        font-size: 14px;
+        color: #8f8f8f;
+    }
+    .copyright {
+        text-align: center;
+        padding: 4px
+    }
+</style>

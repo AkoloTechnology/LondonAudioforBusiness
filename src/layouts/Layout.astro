@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -12,18 +13,23 @@ import Header from '../components/Header.astro';
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<Header />
-		<slot />
+		<div class="grid-container">
+			<div class="grid-header"><Header /></div>			
+			<div class="grid-body"><slot /></div>	
+			<div class="grid-footer"><Footer /></div>	
+		</div>
 	</body>
 </html>
 
 <style is:global>
 	html,
 	body {
-		position: absolute;
 		margin: 0;
-		min-width: 100%;
-		height: auto;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		min-height: 100dvh;
 	}
 	.container {
 		max-width: 1120px;
@@ -31,5 +37,21 @@ import Header from '../components/Header.astro';
 	}
 	.hero {
 		width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("hero.jpg");
 	}
+	* {		
+        font-family: 'Oxygen', sans-serif;
+        font-size: 18px;
+        color: #434343;
+	}
+	a {
+		text-decoration: none;
+	}
+    @font-face {
+        font-family: Decker;
+        src: url(Decker.ttf);
+    }
 </style>

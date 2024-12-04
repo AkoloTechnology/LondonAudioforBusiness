@@ -4,7 +4,28 @@ import LoremIpsum from '../components/loremipsum.astro';
 ---
 
 <Layout>
+    <main>
+        <div class="hero">
+            <h1>Contact Us</h1>
+        </div>
         <div class="container">
             <LoremIpsum count="20" />
         </div>
+    </main>
 </Layout>
+
+<style>
+    .hero {
+        height: 30dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero > h1 {
+        font-size: 72px;
+        color: rgb(255, 255, 255);
+        text-shadow: -2px -2px 8px #404040, 2px 2px 8px #404040;
+        font-family: 'Decker';
+        letter-spacing: 4px;
+    }
+</style>
